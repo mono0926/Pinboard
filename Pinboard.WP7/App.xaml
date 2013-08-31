@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application x:Class="Mono.App.Pinboard.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+             xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Mono.App.Pinboard.ViewModel"
+             xmlns:local="clr-namespace:Mono.App.Pinboard"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" >
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Style/PanoramaStyle.xaml"/>
+                <ResourceDictionary Source="Style/BookmarksStyle.xaml"/>
+                <ResourceDictionary Source="Style/BookmarksStyle.xaml"/>
+                <ResourceDictionary Source="Style/TagResourceDictionary.xaml"/>
+                <ResourceDictionary Source="Style/LongSelectorDictionary.xaml"/>
+                <ResourceDictionary Source="Style/MyConverter.xaml" />
+                <ResourceDictionary Source="Style/Messages.xaml" />
+                <ResourceDictionary Source="Style/ViewModelResource.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <SolidColorBrush x:Key="DeleteButtonBrush" Color="#FF992626"/>
+            <local:MessageKeys x:Key="MessageKeys" />
+        </ResourceDictionary>
+
+    </Application.Resources>
+    <Application.ApplicationLifetimeObjects>
+        <!--Required object that handles lifetime events for the application-->
+        <shell:PhoneApplicationService Launching="Application_Launching" Closing="Application_Closing" Activated="Application_Activated" Deactivated="Application_Deactivated" />
+    </Application.ApplicationLifetimeObjects>
+</Application>

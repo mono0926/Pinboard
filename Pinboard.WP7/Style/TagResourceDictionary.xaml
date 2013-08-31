@@ -1,0 +1,14 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
+	<DataTemplate x:Key="TagButtonTemplate">
+		<Button Content="{Binding Mode=OneWay}" Margin="0" FontFamily="Segoe WP Black"
+		Command="{Binding DataContext.ShowPopupCommand, ElementName=MyPage}"
+		CommandParameter="{Binding}"
+		Foreground="{StaticResource PhoneSubtleBrush}" Background="{StaticResource PhoneAccentBrush}"/>
+	</DataTemplate>
+	<!-- リソース ディクショナリのエントリはここで定義します。-->
+	<ItemsPanelTemplate x:Key="TagButtonItemTemplate">
+		<toolkit:WrapPanel/>
+	</ItemsPanelTemplate>
+</ResourceDictionary>

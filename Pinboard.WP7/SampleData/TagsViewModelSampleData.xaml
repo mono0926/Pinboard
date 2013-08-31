@@ -1,0 +1,13 @@
+<Pinboard_ViewModel:TagsViewModel xmlns:Pinboard_ViewModel="clr-namespace:Pinboard.ViewModel" xmlns:GalaSoft_MvvmLight_Messaging="clr-namespace:GalaSoft.MvvmLight.Messaging;assembly=GalaSoft.MvvmLight.WP71" IsInDesignMode="True" IsInDesignModeStatic="False">
+	<Pinboard_ViewModel:TagsViewModel.Messenger>
+		<GalaSoft_MvvmLight_Messaging:Messenger>
+			<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+		</GalaSoft_MvvmLight_Messaging:Messenger>
+	</Pinboard_ViewModel:TagsViewModel.Messenger>
+</Pinboard_ViewModel:TagsViewModel>

@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Mono.App.Pinboard.Control.PopupControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <Popup x:Name="popup" VerticalAlignment="Top" d:LayoutOverrides="Width"
+		RenderTransformOrigin="0.5,0.5" IsOpen="{Binding IsShowPopup}">
+        <Popup.RenderTransform>
+            <CompositeTransform/>
+        </Popup.RenderTransform>
+        <StackPanel Background="{StaticResource PhoneAccentBrush}" Width="480">
+            <TextBlock TextWrapping="Wrap" Text="What do you do with the tag?" FontSize="{StaticResource PhoneFontSizeMedium}"/>
+            <StackPanel Orientation="Vertical">
+                <Grid Height="72">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="textBox" TextWrapping="Wrap" d:LayoutOverrides="Height"
+						Text="{Binding PopupTag}"/>
+                    <Button Content="Rename" HorizontalAlignment="Right" d:LayoutOverrides="Height" Grid.Column="1" Width="150" Command="{Binding RenameCommand}" CommandParameter="{Binding Text, ElementName=textBox}"/>
+                </Grid>
+                <Button Content="Cancel" Width="150" HorizontalAlignment="Right" Command="{Binding CancelCommand}"/>
+                <Button Content="Remove" Background="{StaticResource DeleteButtonBrush}" HorizontalAlignment="Right" Width="150" Command="{Binding RemoveCommand}"/>
+            </StackPanel>
+        </StackPanel>
+    </Popup>
+</UserControl>

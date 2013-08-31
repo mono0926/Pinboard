@@ -1,0 +1,111 @@
+﻿<view:MonoPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:ei="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions"
+	xmlns:b="clr-namespace:Mono.Framework.Mvvm.Behavior;assembly=Mono.Framework.Mvvm.WP7"
+    xmlns:view="clr-namespace:Mono.Framework.Mvvm.View;assembly=Mono.Framework.Mvvm.WP7"
+    xmlns:ctr="clr-namespace:Mono.App.Pinboard.Control"
+    x:Class="Mono.App.Pinboard.View.AccountView"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <shell:SystemTray.ProgressIndicator>
+        <shell:ProgressIndicator IsIndeterminate="True"
+                                 Text="{Binding ProgressMessage}"
+                                 IsVisible="{Binding IsProgress}"  />
+    </shell:SystemTray.ProgressIndicator>
+
+    <i:Interaction.Triggers>
+        <b:MessageTrigger Messenger="{Binding Messenger}"
+    		 MessageKey="{Binding TransitionKey, Source={StaticResource MessageKeys}}">
+            <b:InteractionNavigationAction />
+        </b:MessageTrigger>
+        <b:MessageTrigger Messenger="{Binding Messenger}"
+    		MessageKey="{Binding GoBackKey, Source={StaticResource MessageKeys}}" >
+            <b:GoBackAction/>
+        </b:MessageTrigger>
+        <b:MessageTrigger  Messenger="{Binding Messenger}"
+                           MessageKey="{Binding LoginSuccessKey, Source={StaticResource MessageKeys}}">
+            <b:ShowMessageBoxAction Content="Login Succeeded!"
+                                    Caption="Welcome to Pinboard!" Button="OK"  />
+        </b:MessageTrigger>
+        <b:MessageTrigger  Messenger="{Binding Messenger}"
+                           MessageKey="{Binding LoginFailKey, Source={StaticResource MessageKeys}}">
+            <b:ShowMessageBoxAction Content="Login Failed..." Button="OK"  />
+        </b:MessageTrigger>
+        <b:MessageTrigger  Messenger="{Binding Messenger}"
+                           MessageKey="{Binding ErrorKey, Source={StaticResource MessageKeys}}">
+            <b:ShowMessageBoxAction Content="{StaticResource UnknownError}"
+                                    Button="OK"  />
+        </b:MessageTrigger>
+    </i:Interaction.Triggers>
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="{StaticResource AppTitle}"
+                       Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="Account" Margin="9,-7,0,0"
+                       Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top" Margin="10,0">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap"
+                           Text="Sign in to your Pinboard account to sync this application with it."/>
+                <Grid Margin="0,20,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Account" d:LayoutOverrides="Height" VerticalAlignment="Center"/>
+                    <TextBlock HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Password" d:LayoutOverrides="Height" VerticalAlignment="Center"/>
+                    <TextBox Text="{Binding Account, Mode=TwoWay}"
+                             TextWrapping="Wrap"
+                             d:LayoutOverrides="Width, Height" Grid.Column="1" Margin="20,0,0,0"/>
+                    <PasswordBox Password="{Binding Password, Mode=TwoWay}"
+                             d:LayoutOverrides="Width, Height" Grid.Row="1" Grid.Column="1" Margin="20,0,0,0"/>
+                </Grid>
+                <Grid Margin="0,20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="Sign In" d:LayoutOverrides="Width, Height"
+                            Command="{Binding SignInCommand}"/>
+                    <Button Command="{Binding CloseCommand}"
+                            Content="Close" d:LayoutOverrides="Width, Height" Grid.Column="1"/>
+                </Grid>
+                <StackPanel Orientation="Vertical" Margin="0,20,0,0"
+                            Visibility="{Binding IsTrialVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <TextBlock TextWrapping="Wrap" FontSize="{StaticResource PhoneFontSizeMedium}"
+                               Text="This is a trial version, so the items displayed are limited to 10 or 20 at most."
+                               Foreground="{StaticResource PhoneAccentBrush}"/>
+                    <TextBlock TextWrapping="Wrap" FontSize="{StaticResource PhoneFontSizeMedium}"
+                               Text="If you would like to perchase the full version, click below and go to Market Place."
+                               Foreground="{StaticResource PhoneAccentBrush}"/>
+                    <Button Content="I would like to purchase"
+                            Background="{StaticResource PhoneAccentBrush}"
+                            Command="{Binding PurchaseCommand}"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</view:MonoPage>

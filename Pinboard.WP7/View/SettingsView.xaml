@@ -1,0 +1,71 @@
+﻿<view:MonoPage
+    x:Class="GTD.WP.SettingsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:view="clr-namespace:Mono.Framework.Mvvm.View;assembly=Mono.Framework.Mvvm.WP7"
+    xmlns:b="clr-namespace:Mono.Framework.Mvvm.Behavior;assembly=Mono.Framework.Mvvm.WP7"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:ei="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+    <view:MonoPage.Resources>
+        <DataTemplate x:Key="ListPickerDataTemplate">
+            <TextBlock Text="{Binding Name}" TextWrapping="Wrap" d:LayoutOverrides="Width, Height"/>
+
+        </DataTemplate>
+    </view:MonoPage.Resources>
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded" >
+            <i:InvokeCommandAction Command="{Binding InitializeCommand}" />
+        </i:EventTrigger>
+
+        <b:MessageTrigger Messenger="{Binding Messenger}"
+    		MessageKey="{Binding GoBackKey, Source={StaticResource MessageKeys}}">
+            <b:GoBackAction/>
+        </b:MessageTrigger>
+    </i:Interaction.Triggers>
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="Pinboard for WP7" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="Settings" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                <toolkit:ListPicker ItemsSource="{Binding Backgrounds}"
+        			SelectedIndex="{Binding SelectedIndex, Mode=TwoWay}"
+        			HorizontalAlignment="Stretch"
+        			Margin="0"
+        			ItemTemplate="{StaticResource ListPickerDataTemplate}"/>
+                <toolkit:ToggleSwitch IsChecked="{Binding IsEnabledClipboard, Mode=TwoWay}"
+                                      Header="Detect Clipboard" Content="Enabled"/>
+                <TextBlock TextWrapping="Wrap" Margin="20,0" Foreground="{StaticResource PhoneSubtleBrush}"><Run Text="If you enable Detect Clipboard, you'll receive a message"/><Run Text=" whether you create a new bookmark using clipboard text when you launch the app."/><LineBreak/><Run/></TextBlock>
+            </StackPanel>
+            <Button Command="{Binding SaveCommand}"
+                    Content="Save" VerticalAlignment="Top"
+                    Grid.Row="1" Background="{StaticResource PhoneAccentBrush}"/>
+        </Grid>
+    </Grid>
+
+</view:MonoPage>

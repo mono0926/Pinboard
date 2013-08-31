@@ -1,0 +1,39 @@
+﻿<view:MonoPage
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+	xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:b="clr-namespace:Mono.Framework.Mvvm.Behavior;assembly=Mono.Framework.Mvvm.WP7"
+    xmlns:view="clr-namespace:Mono.Framework.Mvvm.View;assembly=Mono.Framework.Mvvm.WP7"
+	mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+	x:Class="Mono.App.Pinboard.View.TrialView"
+	FontFamily="{StaticResource PhoneFontFamilyNormal}"
+	FontSize="{StaticResource PhoneFontSizeNormal}"
+	Foreground="{StaticResource PhoneForegroundBrush}"
+	Orientation="Portrait"
+	shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot は、すべてのページ コンテンツが配置されるルート グリッドです-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel には、アプリケーションの名前とページ タイトルが含まれています。-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="{StaticResource AppTitle}" Style="{StaticResource PhoneTextNormalStyle}"/>
+        </StackPanel>
+        <StackPanel x:Name="ContentPanel" Margin="12,0,12,0" Grid.Row="1" >
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="You need to purchase to use this function."
+				VerticalAlignment="Center" Foreground="{StaticResource PhoneAccentBrush}"
+				FontSize="{StaticResource PhoneFontSizeLarge}" Margin="20,250,20,0"
+				Visibility="{Binding IsTrial}"/>
+            <Button Content="I would like to purchase" Background="{StaticResource PhoneAccentBrush}" Command="{Binding PurchaseCommand}" Margin="0,20,0,0"/>
+        </StackPanel>
+
+        <!--ContentPanel - 追加のコンテンツを配置します-->
+    </Grid>
+</view:MonoPage>

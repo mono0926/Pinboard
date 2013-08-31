@@ -1,0 +1,140 @@
+﻿<view:MonoPage
+	x:Name="MyPage"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+	xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+	xmlns:b="clr-namespace:Mono.Framework.Mvvm.Behavior;assembly=Mono.Framework.Mvvm.WP7"
+    xmlns:view="clr-namespace:Mono.Framework.Mvvm.View;assembly=Mono.Framework.Mvvm.WP7"
+	xmlns:ctr="clr-namespace:Mono.App.Pinboard.Control"
+    xmlns:Sh="clr-namespace:Sh;assembly=Sh"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+	xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+	x:Class="Mono.App.Pinboard.View.BookmarkContentView"
+	SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+	mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480" >
+
+    <view:MonoPage.FontFamily>
+        <StaticResource ResourceKey="PhoneFontFamilyNormal"/>
+    </view:MonoPage.FontFamily>
+    <view:MonoPage.FontSize>
+        <StaticResource ResourceKey="PhoneFontSizeNormal"/>
+    </view:MonoPage.FontSize>
+    <view:MonoPage.Foreground>
+        <StaticResource ResourceKey="PhoneForegroundBrush"/>
+    </view:MonoPage.Foreground>
+
+    <i:Interaction.Triggers>
+        <b:MessageTrigger  Messenger="{Binding Messenger}"
+                           MessageKey="{Binding ErrorKey, Source={StaticResource MessageKeys}}">
+            <b:ShowMessageBoxAction Content="Sorry, failed to delete bookmark..."
+                                    Button="OK"/>
+        </b:MessageTrigger>
+        <b:MessageTrigger  Messenger="{Binding Messenger}"
+                           MessageKey="{Binding DeleteBookmarkConfirmKey, Source={StaticResource MessageKeys}}">
+            <b:ShowMessageBoxAction Content="Really Delete?"
+                                    Caption="deleting bookmark..."
+                                    Button="OKCancel"/>
+        </b:MessageTrigger>
+        <b:MessageTrigger  Messenger="{Binding Messenger}"
+                           MessageKey="{Binding SaveBookmarkFailKey, Source={StaticResource MessageKeys}}">
+            <b:ShowMessageBoxAction Content="Sorry, failed to save bookmark. Try again, please..."
+                                    Button="OK"/>
+        </b:MessageTrigger>
+        <b:MessageTrigger MessageKey="{Binding GoBackKey, Source={StaticResource MessageKeys}}"
+                          Messenger="{Binding Messenger}">
+            <b:GoBackAction/>
+        </b:MessageTrigger>
+        <b:MessageTrigger MessageKey="{Binding TransitionKey, Source={StaticResource MessageKeys}}"
+                          Messenger="{Binding Messenger}">
+            <b:InteractionNavigationAction />
+        </b:MessageTrigger>
+        <i:EventTrigger>
+            <i:InvokeCommandAction Command="{Binding InitializeCommand}"/>
+        </i:EventTrigger>
+        <i:EventTrigger EventName="BackKeyPress">
+            <i:InvokeCommandAction Command="{Binding FinalizeCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <Grid x:Name="LayoutRoot" Background="Transparent" Margin="{Binding BrowserMargin}">
+        <Sh:AdvancedApplicationBar>
+            <Sh:AdvancedApplicationBarIconButton Command="{Binding PreCommand}"
+                                                 Text="prev"
+                                                 IconUri="/icons/appbar.back.rest.png"
+                                                 IsEnabled="{Binding PreEnabled}"/>
+            <Sh:AdvancedApplicationBarIconButton Command="{Binding FullScreenCommand}"
+                                                 Text="full screen"
+                                                 IconUri="/icons/full-screen.png"
+                                                 IsEnabled="{Binding FullEnabled}" />
+            <Sh:AdvancedApplicationBarIconButton Text="Add to Mine"
+                                                 IconUri="/icons/appbar.favs.addto.rest.png"
+                                               Command="{Binding CopyCommand}"
+                                               IsEnabled="{Binding CopyEnabled}"/>
+            <Sh:AdvancedApplicationBarIconButton Command="{Binding NextCommand}"
+                                                 Text="next"
+                                                 IconUri="/icons/appbar.next.rest.png"
+                                                 IsEnabled="{Binding NextEnabled}"/>
+            <Sh:AdvancedApplicationBarMenuItem Text="Share"
+                                               Command="{Binding ShareCommand}"/>
+            <Sh:AdvancedApplicationBarMenuItem Text="Open in Internet Explorer"
+                                               Command="{Binding IECommand}"/>
+        </Sh:AdvancedApplicationBar>
+        <ctr:ProgressUserControl VerticalAlignment="Top" Margin="0,3,0,0"/>
+        <controls:Pivot Title="{Binding CurrentTitle}" SelectedIndex="{Binding SelectedIndex, Mode=TwoWay}" >
+            <controls:PivotItem x:Name="BrowserPivot" Header="Web" Margin="0">
+                <phone:WebBrowser Source="{Binding Current.Url}"
+                                  IsScriptEnabled="True" IsGeolocationEnabled="True" >
+                    <i:Interaction.Behaviors>
+                        <b:WebBrowserNavigatingBehavior
+                            NavigatingUrl="{Binding NavigatingUrl, Mode=TwoWay}"
+                            Title="{Binding NavigatedTitle, Mode=TwoWay}"/>
+                    </i:Interaction.Behaviors>
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Navigating">
+                            <i:InvokeCommandAction Command="{Binding NavigatingCommand}"/>
+                        </i:EventTrigger>
+                        <i:EventTrigger EventName="LoadCompleted">
+                            <i:InvokeCommandAction Command="{Binding LoadCompletedCommand}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </phone:WebBrowser>
+            </controls:PivotItem>
+            <controls:PivotItem x:Name="BookmarkPivot" Header="Bookmark" Margin="12,5,12,0">
+                <ScrollViewer d:LayoutOverrides="Height">
+                    <StackPanel Orientation="Vertical">
+                        <ctr:PopupControl  DataContext="{Binding PopupDataContext}" />
+                        <StackPanel DataContext="{Binding Current}" >
+                            <TextBlock TextWrapping="Wrap" Text="Title" FontSize="{StaticResource PhoneFontSizeSmall}" HorizontalAlignment="Left" Foreground="{StaticResource PhoneSubtleBrush}"/>
+                            <TextBox TextWrapping="Wrap"
+								Text="{Binding Title, Mode=TwoWay}"/>
+                            <TextBlock TextWrapping="Wrap" Text="Description" FontSize="{StaticResource PhoneFontSizeSmall}" HorizontalAlignment="Left" Foreground="{StaticResource PhoneSubtleBrush}"/>
+                            <TextBox TextWrapping="Wrap" AcceptsReturn="True" MinHeight="100"
+								Text="{Binding Description, Mode=TwoWay}"/>
+                            <TextBlock TextWrapping="Wrap" Text="Tags" FontSize="{StaticResource PhoneFontSizeSmall}" HorizontalAlignment="Left" Foreground="{StaticResource PhoneSubtleBrush}"/>
+                            <ItemsControl ItemsSource="{Binding Tags, Mode=TwoWay}" ItemsPanel="{StaticResource TagButtonItemTemplate}" ItemTemplate="{StaticResource TagButtonTemplate}"/>
+                            <Button Content="Add Tag" HorizontalAlignment="Center" Margin="0,0,10,0" Width="200"
+									Command="{Binding DataContext.NavigateTagCommand, ElementName=MyPage}"/>
+                            <toolkit:ToggleSwitch Header="Private"
+								IsChecked="{Binding IsPrivate, Mode=TwoWay}" />
+                            <toolkit:ToggleSwitch Header="To Read"
+								IsChecked="{Binding IsUnread, Mode=TwoWay}"/>
+                        </StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Button Content="Save" Command="{Binding SaveCommand}"/>
+                            <Button Content="Delete" Command="{Binding DeleteCommand}"
+								d:LayoutOverrides="Height" Grid.Column="1" Grid.Row="1" Background="{StaticResource DeleteButtonBrush}"/>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+            </controls:PivotItem>
+        </controls:Pivot>
+    </Grid>
+</view:MonoPage>

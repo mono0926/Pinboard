@@ -1,0 +1,206 @@
+﻿<Pinboard_ViewModel:FeedContentViewModel xmlns:Pinboard_ViewModel="clr-namespace:Pinboard.ViewModel" xmlns:GalaSoft_MvvmLight_Messaging="clr-namespace:GalaSoft.MvvmLight.Messaging;assembly=GalaSoft.MvvmLight.WP71" xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:GalaSoft_MvvmLight_Command="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.WP71" IsInDesignMode="True" IsInDesignModeStatic="False">
+	<Pinboard_ViewModel:FeedContentViewModel.Current>
+		<Pinboard_ViewModel:FeedItemViewModel Description="Cras vestibulum curabitur aliquam" IsInDesignMode="True" IsInDesignModeStatic="False" Time="02/16/2012 20:59:49" Title="Cursus donec aliquam" Url="Facilisi faucibus aliquet">
+			<Pinboard_ViewModel:FeedItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:FeedItemViewModel.Messenger>
+			<Pinboard_ViewModel:FeedItemViewModel.Tags>
+				<System:String>Duis</System:String>
+				<System:String>Nunc</System:String>
+				<System:String>Aenean</System:String>
+				<System:String>Duis</System:String>
+				<System:String>Nunc</System:String>
+				<System:String>Aenean</System:String>
+				<System:String>Duis</System:String>
+				<System:String>Nunc</System:String>
+				<System:String>Aenean</System:String>
+			</Pinboard_ViewModel:FeedItemViewModel.Tags>
+		</Pinboard_ViewModel:FeedItemViewModel>
+	</Pinboard_ViewModel:FeedContentViewModel.Current>
+	<Pinboard_ViewModel:FeedContentViewModel.FullScreenCommand>
+		<GalaSoft_MvvmLight_Command:RelayCommand/>
+	</Pinboard_ViewModel:FeedContentViewModel.FullScreenCommand>
+	<Pinboard_ViewModel:FeedContentViewModel.Items>
+		<Pinboard_ViewModel:FeedItemViewModel Description="Mus nec blandit habitant elementum" IsInDesignMode="True" IsInDesignModeStatic="False" Time="02/16/2012 20:59:49" Title="Lobortis adipiscing" Url="Parturient libero dapibus">
+			<Pinboard_ViewModel:FeedItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:FeedItemViewModel.Messenger>
+			<Pinboard_ViewModel:FeedItemViewModel.Tags>
+				<System:String>Facilisis commodo</System:String>
+				<System:String>Fermentum elit fringilla non etiam</System:String>
+				<System:String>Per fusce dictum lectus lorem</System:String>
+				<System:String>Enim habitasse inceptos conubia morbi</System:String>
+				<System:String>Cubilia hendrerit sed interdum</System:String>
+			</Pinboard_ViewModel:FeedItemViewModel.Tags>
+		</Pinboard_ViewModel:FeedItemViewModel>
+		<Pinboard_ViewModel:FeedItemViewModel Description="Himenaeos erat" IsInDesignMode="True" IsInDesignModeStatic="False" Time="02/16/2012 20:59:49" Title="Pharetra euismod placerat" Url="Feugiat nisi nisl pulvinar">
+			<Pinboard_ViewModel:FeedItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:FeedItemViewModel.Messenger>
+			<Pinboard_ViewModel:FeedItemViewModel.Tags>
+				<System:String>Vestibulum imperdiet sem nascetur</System:String>
+				<System:String>Ligula vestibulum eros litora</System:String>
+				<System:String>Nulla nibh egestas malesuada penatibus</System:String>
+				<System:String>Porttitor sit adipiscing parturient vestibulum</System:String>
+				<System:String>Proin tincidunt vel vestibulum</System:String>
+			</Pinboard_ViewModel:FeedItemViewModel.Tags>
+		</Pinboard_ViewModel:FeedItemViewModel>
+		<Pinboard_ViewModel:FeedItemViewModel Description="Adipiscing tristique augue" IsInDesignMode="True" IsInDesignModeStatic="False" Time="02/16/2012 20:59:49" Title="Vestibulum sagittis adipiscing parturient" Url="Luctus quam est quis">
+			<Pinboard_ViewModel:FeedItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:FeedItemViewModel.Messenger>
+			<Pinboard_ViewModel:FeedItemViewModel.Tags>
+				<System:String>Nunc nam</System:String>
+				<System:String>Odio gravida dolor ultricies parturient</System:String>
+				<System:String>Fames iaculis</System:String>
+				<System:String>Orci pede sed dis</System:String>
+				<System:String>Vestibulum felis</System:String>
+			</Pinboard_ViewModel:FeedItemViewModel.Tags>
+		</Pinboard_ViewModel:FeedItemViewModel>
+		<Pinboard_ViewModel:FeedItemViewModel Description="Vestibulum hac lacinia" IsInDesignMode="True" IsInDesignModeStatic="False" Time="02/16/2012 20:59:49" Title="Cras parturient phasellus torquent" Url="Mollis ultrices">
+			<Pinboard_ViewModel:FeedItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:FeedItemViewModel.Messenger>
+			<Pinboard_ViewModel:FeedItemViewModel.Tags>
+				<System:String>Vestibulum venenatis senectus</System:String>
+				<System:String>Leo vulputate</System:String>
+				<System:String>Magnis mattis ipsum sociosqu curabitur</System:String>
+				<System:String>Laoreet mauris suscipit urna</System:String>
+				<System:String>Mus adipiscing</System:String>
+			</Pinboard_ViewModel:FeedItemViewModel.Tags>
+		</Pinboard_ViewModel:FeedItemViewModel>
+		<Pinboard_ViewModel:FeedItemViewModel Description="Justo lacus natoque" IsInDesignMode="True" IsInDesignModeStatic="False" Time="02/16/2012 20:59:49" Title="Morbi nunc neque elementum ornare" Url="Amet facilisis netus ante">
+			<Pinboard_ViewModel:FeedItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:FeedItemViewModel.Messenger>
+			<Pinboard_ViewModel:FeedItemViewModel.Tags>
+				<System:String>Vehicula nec lorem non duis</System:String>
+				<System:String>Vestibulum magna montes consequat vestibulum</System:String>
+				<System:String>Per posuere</System:String>
+				<System:String>Potenti massa</System:String>
+				<System:String>Convallis volutpat dignissim metus nostra</System:String>
+			</Pinboard_ViewModel:FeedItemViewModel.Tags>
+		</Pinboard_ViewModel:FeedItemViewModel>
+		<Pinboard_ViewModel:FeedItemViewModel Description="Platea sed" IsInDesignMode="True" IsInDesignModeStatic="False" Time="02/16/2012 20:59:49" Title="Vestibulum praesent" Url="Sapien fringilla">
+			<Pinboard_ViewModel:FeedItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:FeedItemViewModel.Messenger>
+			<Pinboard_ViewModel:FeedItemViewModel.Tags>
+				<System:String>Arcu pretium primis rhoncus</System:String>
+				<System:String>Sem rutrum sit</System:String>
+				<System:String>Diam sodales adipiscing nulla</System:String>
+				<System:String>Vel fermentum porta parturient</System:String>
+				<System:String>Purus maecenas viverra vestibulum</System:String>
+			</Pinboard_ViewModel:FeedItemViewModel.Tags>
+		</Pinboard_ViewModel:FeedItemViewModel>
+		<Pinboard_ViewModel:FeedItemViewModel Description="Nam risus semper velit adipiscing" IsInDesignMode="True" IsInDesignModeStatic="False" Time="02/16/2012 20:59:49" Title="Sed taciti tellus tempor adipiscing" Url="Enim hendrerit erat tempus curae">
+			<Pinboard_ViewModel:FeedItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:FeedItemViewModel.Messenger>
+			<Pinboard_ViewModel:FeedItemViewModel.Tags>
+				<System:String>Habitasse vitae</System:String>
+				<System:String>Aliquam eget parturient accumsan bibendum</System:String>
+				<System:String>Integer elit vestibulum class sociis</System:String>
+				<System:String>Quisque vivamus</System:String>
+				<System:String>Dictumst aliquam vestibulum</System:String>
+			</Pinboard_ViewModel:FeedItemViewModel.Tags>
+		</Pinboard_ViewModel:FeedItemViewModel>
+		<Pinboard_ViewModel:FeedItemViewModel Description="Himenaeos eleifend donec eros" IsInDesignMode="True" IsInDesignModeStatic="False" Time="02/16/2012 20:59:49" Title="Nulla leo proin parturient" Url="Malesuada blandit">
+			<Pinboard_ViewModel:FeedItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:FeedItemViewModel.Messenger>
+			<Pinboard_ViewModel:FeedItemViewModel.Tags>
+				<System:String>Facilisi nibh dis</System:String>
+				<System:String>Tortor etiam fusce nisi</System:String>
+				<System:String>Est nisl faucibus turpis</System:String>
+				<System:String>Hac imperdiet lorem aliquet</System:String>
+				<System:String>Morbi nunc habitant</System:String>
+			</Pinboard_ViewModel:FeedItemViewModel.Tags>
+		</Pinboard_ViewModel:FeedItemViewModel>
+		<Pinboard_ViewModel:FeedItemViewModel Description="Vestibulum mus penatibus vestibulum varius" IsInDesignMode="True" IsInDesignModeStatic="False" Time="02/16/2012 20:59:49" Title="Conubia non quam" Url="Per fames felis vestibulum">
+			<Pinboard_ViewModel:FeedItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:FeedItemViewModel.Messenger>
+			<Pinboard_ViewModel:FeedItemViewModel.Tags>
+				<System:String>Augue porttitor adipiscing tincidunt</System:String>
+				<System:String>Inceptos commodo odio aenean</System:String>
+				<System:String>Orci mauris pede tristique parturient</System:String>
+				<System:String>Dolor ultricies nec venenatis</System:String>
+				<System:String>Nullam aptent</System:String>
+			</Pinboard_ViewModel:FeedItemViewModel.Tags>
+		</Pinboard_ViewModel:FeedItemViewModel>
+		<Pinboard_ViewModel:FeedItemViewModel Description="Vulputate ipsum" IsInDesignMode="True" IsInDesignModeStatic="False" Time="02/16/2012 20:59:49" Title="Lobortis parturient" Url="Lectus nunc nascetur magna">
+			<Pinboard_ViewModel:FeedItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:FeedItemViewModel.Messenger>
+			<Pinboard_ViewModel:FeedItemViewModel.Tags>
+				<System:String>Cubilia auctor</System:String>
+				<System:String>Quis congue urna dapibus curabitur</System:String>
+				<System:String>Phasellus cursus</System:String>
+				<System:String>Justo sed interdum dictum vestibulum</System:String>
+				<System:String>Adipiscing lacus cras duis lorem</System:String>
+			</Pinboard_ViewModel:FeedItemViewModel.Tags>
+		</Pinboard_ViewModel:FeedItemViewModel>
+	</Pinboard_ViewModel:FeedContentViewModel.Items>
+	<Pinboard_ViewModel:FeedContentViewModel.Messenger>
+		<GalaSoft_MvvmLight_Messaging:Messenger>
+			<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+		</GalaSoft_MvvmLight_Messaging:Messenger>
+	</Pinboard_ViewModel:FeedContentViewModel.Messenger>
+	<Pinboard_ViewModel:FeedContentViewModel.NextCommand>
+		<GalaSoft_MvvmLight_Command:RelayCommand/>
+	</Pinboard_ViewModel:FeedContentViewModel.NextCommand>
+	<Pinboard_ViewModel:FeedContentViewModel.PreCommand>
+		<GalaSoft_MvvmLight_Command:RelayCommand/>
+	</Pinboard_ViewModel:FeedContentViewModel.PreCommand>
+</Pinboard_ViewModel:FeedContentViewModel>

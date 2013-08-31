@@ -1,0 +1,61 @@
+﻿<ResourceDictionary
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" mc:Ignorable="d">
+    <!-- リソース ディクショナリのエントリはここで定義します。-->
+    <DataTemplate x:Key="LongHeaderTemplate">
+        <Grid Margin="12,0,0,0">
+            <Grid Width="75" Height="75" HorizontalAlignment="Left">
+                <TextBlock Margin="12,0,1,7" TextWrapping="Wrap"
+					d:LayoutOverrides="Width,Height"
+					Style="{StaticResource PhoneTextLargeStyle}"
+					Text="{Binding GroupName}" VerticalAlignment="Bottom"/>
+                <Border BorderThickness="1">
+                    <Border.BorderBrush>
+                        <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                    </Border.BorderBrush>
+                </Border>
+            </Grid>
+        </Grid>
+    </DataTemplate>
+
+    <ItemsPanelTemplate x:Key="TagGroupTemplate">
+        <toolkit:WrapPanel/>
+    </ItemsPanelTemplate>
+    <DataTemplate x:Key="TagItemTemplate">
+        <Border Background="{StaticResource PhoneAccentBrush}"
+			Width="100" Height="100" Margin="5">
+            <TextBlock Text="{Binding GroupName}" FontSize="30"/>
+
+        </Border>
+
+    </DataTemplate>
+
+    <DataTemplate x:Key="TagDataTemplate">
+        <StackPanel
+						Background="Transparent" Width="400" Orientation="Horizontal" HorizontalAlignment="Left" Margin="12,0,0,0">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Tap">
+                    <i:InvokeCommandAction Command="{Binding DataContext.SelectTagCommand, ElementName=MyPage}" CommandParameter="{Binding Mode=OneWay}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Border HorizontalAlignment="Left"
+								Background="{StaticResource PhoneAccentBrush}"
+								Width="75" Height="75" Margin="0,3,20,3"
+								VerticalAlignment="Top">
+                <TextBlock Style="{StaticResource PhoneTextNormalStyle}" Margin="0,0,0,5"
+									   HorizontalAlignment="Center"
+									   VerticalAlignment="Center"
+									   FontSize="{StaticResource PhoneFontSizeMediumLarge}"
+									   Foreground="{StaticResource PhoneForegroundBrush}"
+									   Text="{Binding Count}" />
+            </Border>
+            <TextBlock Style="{StaticResource PhoneTextNormalStyle}"
+								   HorizontalAlignment="Left"
+								   FontSize="{StaticResource PhoneFontSizeLarge}"
+								   VerticalAlignment="Center"
+								   Text="{Binding Name}" Margin="0" Height="50"/>
+        </StackPanel>
+    </DataTemplate>
+
+</ResourceDictionary>

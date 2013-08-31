@@ -1,0 +1,47 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:conv="clr-namespace:Mono.Framework.Mvvm.Converter;assembly=Mono.Framework.Mvvm.WP7"
+    xmlns:vm="clr-namespace:Mono.App.Pinboard.ViewModel"
+    mc:Ignorable="d">
+    <vm:SetupItemViewModel x:Key="AccountSetup"
+                          Title="Pinboard Account"
+                          Description="Sign in your Pinboard account and sync with it."
+                           Type="Account"/>
+    <vm:SetupItemViewModel x:Key="SettingsSetup"
+                          Title="Settings"
+                          Description="Customize this application as you can use effectively."
+                           Type="Setting"/>
+    <vm:SetupItemViewModel x:Key="SupportSetup"
+                          Title="Support"
+                          Description="If you have suggestions, would you send me mail? English and Japanese okay :)"
+                           Type="Support"/>
+    <vm:ItemBoxViewModel x:Key="AllBookmarkItem"  Title="All Bookmarks" Type="All"  />
+    <vm:ItemBoxViewModel x:Key="UnreadItem" Title="Unread"  Type="Unread"/>
+    <vm:ItemBoxViewModel x:Key="PrivateItem" Title="Private"  Type="Private" />
+    <vm:ItemBoxViewModel x:Key="PublicItem"  Title="Public"  Type="Public"/>
+    <vm:ItemBoxViewModel x:Key="UntaggedItem" Title="Untagged"  Type="Untagged" />
+    <vm:ItemBoxViewModel x:Key="TaggedItem" Title="Tagged"  Type="Tags" />
+    <vm:ItemBoxViewModel x:Key="NetworkItem" Title="Network"  Type="Network" />
+    <vm:ItemBoxViewModel x:Key="PopularItem" Title="Popular"   Type="Popular"/>
+    <vm:ItemBoxViewModel x:Key="RecentItem" Title="Recent"  Type="Recent"/>
+    <vm:ItemBoxViewModel x:Key="PowerSearhItem" Title="Power Search"   ImageSource="/Asset/search.png"   Type="Search"/>
+    <vm:ItemBoxViewModel x:Key="TagSearchItem" Title="Tag Search" ImageSource="/Asset/tag.png"   Type="TagSearch" />
+    <vm:ItemBoxViewModel x:Key="AnotherUserItem" Title="Another User"  ImageSource="/Asset/user.png"  Type="User"/>
+    <vm:MainViewModel x:Key="MainViewModel" AllBookmarkItem="{StaticResource AllBookmarkItem}"
+                       UnreadItem="{StaticResource UnreadItem}"
+                       PrivateItem="{StaticResource PrivateItem}"
+                       PublicItem="{StaticResource PublicItem}"
+                       UntaggedItem="{StaticResource UntaggedItem}"
+                       TaggedItem="{StaticResource TaggedItem}"
+                       NetworkItem="{StaticResource NetworkItem}"
+                       PopularItem="{StaticResource PopularItem}"
+                       RecentItem="{StaticResource RecentItem}"
+                       PowerSearhItem="{StaticResource PowerSearhItem}"
+                       TagSearchItem="{StaticResource TagSearchItem}"
+                       AnotherUserItem="{StaticResource AnotherUserItem}" />
+</ResourceDictionary>

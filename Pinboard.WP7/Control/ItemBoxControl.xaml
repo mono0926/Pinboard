@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="Mono.App.Pinboard.Control.ItemBoxControl"
+             xmlns:view="clr-namespace:Mono.Framework.Mvvm.View;assembly=Mono.Framework.Mvvm.WP7"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    mc:Ignorable="d"
+xmlns:b="clr-namespace:Mono.Framework.Mvvm.Behavior;assembly=Mono.Framework.Mvvm.WP7"
+               FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="800" d:DesignWidth="480">
+
+    <Grid x:Name="LayoutRoot">
+        <StackPanel Orientation="Horizontal">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Tap">
+                    <i:InvokeCommandAction Command="{Binding ItemCommand, Source={StaticResource MainViewModel}}"
+    						CommandParameter="{Binding}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Grid Height="115" Width="115">
+                <Border Background="{StaticResource PhoneAccentBrush}" Width="100" HorizontalAlignment="Left" Height="100" Margin="5,5,0,0" VerticalAlignment="Top"/>
+                <Image Source="{Binding ImageSource}" Stretch="Fill" Width="100" HorizontalAlignment="Left" Height="100" Margin="5,5,0,0" VerticalAlignment="Top" />
+                <TextBlock Text="{Binding Count, Converter={StaticResource ZeroToEmptyConverter}}"
+                           FontSize="32" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10,0,0,10" />
+
+            </Grid>
+            <TextBlock Text="{Binding Title}" FontSize="{StaticResource PhoneFontSizeLarge}" d:LayoutOverrides="Width" Margin="0,0,0,15" VerticalAlignment="Bottom" />
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,206 @@
+﻿<Pinboard_ViewModel:BookmarkContentViewModel xmlns:Pinboard_ViewModel="clr-namespace:Pinboard.ViewModel" xmlns:GalaSoft_MvvmLight_Messaging="clr-namespace:GalaSoft.MvvmLight.Messaging;assembly=GalaSoft.MvvmLight.WP71" xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:GalaSoft_MvvmLight_Command="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.WP71" IsInDesignMode="True" IsInDesignModeStatic="False">
+	<Pinboard_ViewModel:BookmarkContentViewModel.Current>
+		<Pinboard_ViewModel:BookmarkItemViewModel Description="Cras nam" IsInDesignMode="True" IsInDesignModeStatic="False" IsUnread="False" IsPrivate="True" Time="02/16/2012 20:57:44" Title="Morbi nullam adipiscing aptent auctor" Url="Convallis nulla accumsan diam leo">
+			<Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+			<Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+				<System:String>Class</System:String>
+				<System:String>apple</System:String>
+				<System:String>egg</System:String>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+		</Pinboard_ViewModel:BookmarkItemViewModel>
+	</Pinboard_ViewModel:BookmarkContentViewModel.Current>
+	<Pinboard_ViewModel:BookmarkContentViewModel.DeleteCommand>
+		<GalaSoft_MvvmLight_Command:RelayCommand/>
+	</Pinboard_ViewModel:BookmarkContentViewModel.DeleteCommand>
+	<Pinboard_ViewModel:BookmarkContentViewModel.FullScreenCommand>
+		<GalaSoft_MvvmLight_Command:RelayCommand/>
+	</Pinboard_ViewModel:BookmarkContentViewModel.FullScreenCommand>
+	<Pinboard_ViewModel:BookmarkContentViewModel.Items>
+		<Pinboard_ViewModel:BookmarkItemViewModel Description="Eget bibendum elit mus dignissim" IsInDesignMode="True" IsInDesignModeStatic="False" IsUnread="False" IsPrivate="True" Time="02/16/2012 20:57:44" Title="Congue facilisis" Url="Nibh cubilia sed">
+			<Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+			<Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+				<System:String>Nec proin augue non</System:String>
+				<System:String>Aliquet dolor</System:String>
+				<System:String>Enim blandit erat commodo</System:String>
+				<System:String>Conubia parturient</System:String>
+				<System:String>Dictumst eros elementum eleifend per</System:String>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+		</Pinboard_ViewModel:BookmarkItemViewModel>
+		<Pinboard_ViewModel:BookmarkItemViewModel Description="Nisi cursus nisl" IsInDesignMode="True" IsInDesignModeStatic="False" IsUnread="False" IsPrivate="True" Time="02/16/2012 20:57:44" Title="Fringilla habitasse hendrerit himenaeos" Url="Adipiscing faucibus">
+			<Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+			<Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+				<System:String>Dictum nunc lectus vestibulum</System:String>
+				<System:String>Facilisi fermentum</System:String>
+				<System:String>Odio orci pede quam</System:String>
+				<System:String>Quis sem vestibulum</System:String>
+				<System:String>Fames felis sit</System:String>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+		</Pinboard_ViewModel:BookmarkItemViewModel>
+		<Pinboard_ViewModel:BookmarkItemViewModel Description="Libero ligula ipsum urna" IsInDesignMode="True" IsInDesignModeStatic="False" IsUnread="False" IsPrivate="True" Time="02/16/2012 20:57:44" Title="Egestas interdum dis est euismod" Url="Hac lobortis amet">
+			<Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+			<Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+				<System:String>Justo litora parturient cras</System:String>
+				<System:String>Vel nam imperdiet vestibulum</System:String>
+				<System:String>Duis nunc habitant</System:String>
+				<System:String>Dapibus luctus malesuada</System:String>
+				<System:String>Magnis inceptos mattis sed</System:String>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+		</Pinboard_ViewModel:BookmarkItemViewModel>
+		<Pinboard_ViewModel:BookmarkItemViewModel Description="Mauris nascetur" IsInDesignMode="True" IsInDesignModeStatic="False" IsUnread="False" IsPrivate="True" Time="02/16/2012 20:57:44" Title="Nec neque eget netus" Url="Montes penatibus senectus">
+			<Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+			<Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+				<System:String>Lacus pharetra placerat leo pulvinar</System:String>
+				<System:String>Feugiat mollis sagittis</System:String>
+				<System:String>Lorem vestibulum mus</System:String>
+				<System:String>Ante magna adipiscing arcu diam</System:String>
+				<System:String>Massa metus morbi</System:String>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+		</Pinboard_ViewModel:BookmarkItemViewModel>
+		<Pinboard_ViewModel:BookmarkItemViewModel Description="Non nulla porttitor tincidunt gravida" IsInDesignMode="True" IsInDesignModeStatic="False" IsUnread="False" IsPrivate="True" Time="02/16/2012 20:57:44" Title="Ultrices semper" Url="Vestibulum risus velit">
+			<Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+			<Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+				<System:String>Tristique sociosqu elit suscipit</System:String>
+				<System:String>Nostra ornare</System:String>
+				<System:String>Torquent parturient ultricies porta venenatis</System:String>
+				<System:String>Purus platea vestibulum</System:String>
+				<System:String>Primis rutrum enim vulputate sapien</System:String>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+		</Pinboard_ViewModel:BookmarkItemViewModel>
+		<Pinboard_ViewModel:BookmarkItemViewModel Description="Per sociis vitae class" IsInDesignMode="True" IsInDesignModeStatic="False" IsUnread="False" IsPrivate="True" Time="02/16/2012 20:57:44" Title="Fusce vestibulum varius aenean" Url="Eros sem adipiscing lorem">
+			<Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+			<Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+				<System:String>Adipiscing iaculis erat curabitur taciti</System:String>
+				<System:String>Tellus curae tempor sed</System:String>
+				<System:String>Donec vehicula volutpat maecenas tempus</System:String>
+				<System:String>Tortor phasellus lacinia parturient vestibulum</System:String>
+				<System:String>Turpis etiam</System:String>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+		</Pinboard_ViewModel:BookmarkItemViewModel>
+		<Pinboard_ViewModel:BookmarkItemViewModel Description="Consequat laoreet sit nibh" IsInDesignMode="True" IsInDesignModeStatic="False" IsUnread="False" IsPrivate="True" Time="02/16/2012 20:57:44" Title="Posuere elementum parturient potenti" Url="Pretium dictumst aptent">
+			<Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+			<Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+				<System:String>Mauris vel</System:String>
+				<System:String>Morbi nam parturient convallis vestibulum</System:String>
+				<System:String>Praesent vestibulum nulla dignissim nisi</System:String>
+				<System:String>Accumsan adipiscing sed nullam</System:String>
+				<System:String>Natoque bibendum nisl</System:String>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+		</Pinboard_ViewModel:BookmarkItemViewModel>
+		<Pinboard_ViewModel:BookmarkItemViewModel Description="Proin auctor augue nunc" IsInDesignMode="True" IsInDesignModeStatic="False" IsUnread="False" IsPrivate="True" Time="02/16/2012 20:57:44" Title="Sodales inceptos mus cursus" Url="Viverra dictum">
+			<Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+			<Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+				<System:String>Dolor facilisis eleifend rhoncus fames</System:String>
+				<System:String>Congue odio facilisi</System:String>
+				<System:String>Faucibus dis</System:String>
+				<System:String>Vestibulum fermentum felis est</System:String>
+				<System:String>Hac ipsum habitant orci leo</System:String>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+		</Pinboard_ViewModel:BookmarkItemViewModel>
+		<Pinboard_ViewModel:BookmarkItemViewModel Description="Lectus libero" IsInDesignMode="True" IsInDesignModeStatic="False" IsUnread="False" IsPrivate="True" Time="02/16/2012 20:57:44" Title="Luctus placerat per lorem" Url="Habitasse aliquet urna magnis">
+			<Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+			<Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+				<System:String>Interdum justo aliquam integer quisque</System:String>
+				<System:String>Lacus fringilla vestibulum nec vivamus</System:String>
+				<System:String>Pede lobortis nascetur quam adipiscing</System:String>
+				<System:String>Non quis aliquam</System:String>
+				<System:String>Parturient pharetra ligula litora</System:String>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+		</Pinboard_ViewModel:BookmarkItemViewModel>
+		<Pinboard_ViewModel:BookmarkItemViewModel Description="Sed cras hendrerit" IsInDesignMode="True" IsInDesignModeStatic="False" IsUnread="False" IsPrivate="True" Time="02/16/2012 20:57:44" Title="Amet vestibulum nostra" Url="Imperdiet adipiscing">
+			<Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Messenger>
+			<Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+				<System:String>Vestibulum mattis</System:String>
+				<System:String>Magna duis mauris massa</System:String>
+				<System:String>Mollis blandit nunc sem</System:String>
+				<System:String>Himenaeos commodo conubia montes metus</System:String>
+				<System:String>Pulvinar sit</System:String>
+			</Pinboard_ViewModel:BookmarkItemViewModel.Tags>
+		</Pinboard_ViewModel:BookmarkItemViewModel>
+	</Pinboard_ViewModel:BookmarkContentViewModel.Items>
+	<Pinboard_ViewModel:BookmarkContentViewModel.Messenger>
+		<GalaSoft_MvvmLight_Messaging:Messenger>
+			<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				<GalaSoft_MvvmLight_Messaging:Messenger>
+					<GalaSoft_MvvmLight_Messaging:Messenger.Default>
+						<GalaSoft_MvvmLight_Messaging:Messenger/>
+					</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+				</GalaSoft_MvvmLight_Messaging:Messenger>
+			</GalaSoft_MvvmLight_Messaging:Messenger.Default>
+		</GalaSoft_MvvmLight_Messaging:Messenger>
+	</Pinboard_ViewModel:BookmarkContentViewModel.Messenger>
+	<Pinboard_ViewModel:BookmarkContentViewModel.NextCommand>
+		<GalaSoft_MvvmLight_Command:RelayCommand/>
+	</Pinboard_ViewModel:BookmarkContentViewModel.NextCommand>
+	<Pinboard_ViewModel:BookmarkContentViewModel.PreCommand>
+		<GalaSoft_MvvmLight_Command:RelayCommand/>
+	</Pinboard_ViewModel:BookmarkContentViewModel.PreCommand>
+	<Pinboard_ViewModel:BookmarkContentViewModel.SaveCommand>
+		<GalaSoft_MvvmLight_Command:RelayCommand/>
+	</Pinboard_ViewModel:BookmarkContentViewModel.SaveCommand>
+</Pinboard_ViewModel:BookmarkContentViewModel>
